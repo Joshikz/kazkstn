@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Kinetika";
+  src: local("Kinetika Black"), local("Kinetika-Black"),
+    url("../fonts/Kinetika_Black/Kinetika-Black.woff2") format("woff2"),
+    url("../fonts/Kinetika_Black/Kinetika-Black.woff") format("woff"),
+    url("../fonts/Kinetika_Black/Kinetika-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "Raleway";
+  font-size: 64px;
+}
+h2 {
+  font-family: "Raleway";
+  font-size: 26px;
+}
+h3 {
+  font-family: "Raleway";
+  font-size: 22px;
+}
+h4 {
+  font-family: "Raleway";
+}
+p {
+  font-family: "Lato";
+  font-size: 20px;
+}
+*::-webkit-scrollbar {
+  background-color: #00abc2;
+  width: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #ffec2d;
+}
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #ffec2d;
+  color: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#scrollToTopButton:hover {
+  background-color: #716914;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Шапка */
+
+header {
+  width: 100%;
+  background-color: #00abc2;
+  position: absolute;
+}
+
+.logotype img {
+  width: 6.5rem;
+  padding-left: 1.25rem;
+}
+.nav-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.25rem;
+}
+.links-container {
+  display: flex;
+  height: 100%;
+}
+.link-container:nth-child(2) {
+  border-right: #000000 solid 5px;
+}
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: inherit;
+  padding: 0 2.5rem;
+
+  position: relative;
+  overflow: hidden;
+}
+.link-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #ffec2d;
+  transition: height 0.2s ease;
+}
+.link-container:hover::before {
+  height: 100%;
+}
+.link-container:hover a {
+  color: #000000;
+  transition: 0.3s ease;
+}
+.link-container svg {
+  width: 2rem;
+  z-index: 1;
+  color: #ffec2d;
+  transition: 0.2s ease;
+}
+.link-container:hover svg {
+  transition: 0.2s ease;
+  color: #00abc2;
+}
+.link {
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+
+/* ГЛАВНАЯ СТРАНИЦА */
+
+#main-section {
+  display: flex;
+  height: 100vh;
+
+  background-image: url("../img/a8f7251d6c35c1aff22a98438a20f21e.jpeg");
+  background-size: cover;
+}
+.main-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  height: inherit;
+  width: 100vw;
+}
+.main-text {
+  text-align: center;
+  width: 62.5rem;
+  color: white;
+}
+.main-text h1 {
+  border-bottom: 0.3125rem solid #00abc2;
+  color: #ffec2d;
+  padding: 0 6.25rem 1.25rem 6.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* О КАЗАХСТАНЕ */
+
+#country-section {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+#country-section img {
+  position: absolute;
+  width: 100%;
+  height: 100rem;
+
+  z-index: -1;
+}
+
+.title {
+  width: 100%;
+  background-color: #00abc2;
+  color: #ffec2d;
+
+  text-align: center;
+  padding: 1rem 0;
+}
+.subtitle {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+
+  background-color: #ffec2d;
+  color: #00abc2;
+}
+
+.country-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12rem 0;
+
+  width: 100%;
+}
+.country-text {
+  width: 40%;
+  color: white;
+}
+.country-text li {
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.carousel {
+  width: 40%;
+  background-image: url("../img/history.jpg");
+  transition: 0.2s ease;
+  background-size: cover;
+
+  height: 50vh;
+  position: relative;
+}
+
+.carousel-btns {
+  display: flex;
+  width: 100%;
+  height: 15%;
+}
+
+#carousel-prev,
+#carousel-next {
+  background-color: #00000033;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+#carousel-prev:hover,
+#carousel-next:hover {
+  transition: 0.3s ease;
+  background-color: #00000080;
+}
+
+.underlines {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  gap: 1.25rem;
+
+  background-color: #00000080;
+}
+.underline {
+  border-bottom: 5px solid #00abc2;
+  width: 3.125rem;
+
+  transition: border-bottom 0.2s ease;
+}
+.underline.active {
+  border-bottom: 5px solid #ffec2d;
+}
+
+/* Города */
+
+#city-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.city-section-bg {
+  z-index: -1;
+  position: absolute;
+  height: inherit;
+  width: 100%;
+}
+.city-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  /* gap: 80px; */
+  width: 100%;
+  padding: 12rem 0;
+}
+.city-card {
+  width: 25vw;
+  height: 30rem;
+
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+  z-index: 1;
+}
+.city-card-bg {
+  z-index: -1;
+  position: absolute;
+
+  width: inherit;
+  height: inherit;
+  opacity: 0.4;
+}
+.city-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 5rem;
+  width: 100%;
+
+  background-color: #00abc2;
+  color: #ffec2d;
+}
+.city-top h2 {
+  font-size: 30px;
+  font-weight: 500;
+  font-style: italic;
+}
+.city-description {
+  padding: 20px;
+  overflow-y: scroll;
+  height: 20rem;
+
+  color: white;
+}
+.city-description p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.city-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 5rem;
+
+  background-color: #ffec2d;
+  color: #00abc2;
+  border: transparent solid 3px;
+  transition: 0.2s;
+
+  font-family: "Raleway";
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.city-btn:hover {
+  background-color: #00abc2;
+  color: #ffec2d;
+  border: #ffec2d solid 3px;
+  transition: 0.2s;
+
+  text-decoration: underline;
+}
+
+/* Подвал */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 30%;
+  background-color: #00abc2;
+
+  padding: 0.5rem 0;
+}
+.logotype-footer {
+  width: 100px;
+  padding: 5px;
+}
+
+.addictionals {
+  text-align: center;
+}
+.addictionals h3 {
+  font-size: 18px;
+}

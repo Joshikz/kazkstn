@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+  src: url("../fonts/Lato/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Kinetika";
+  src: local("Kinetika Black"), local("Kinetika-Black"),
+    url("../fonts/Kinetika_Black/Kinetika-Black.woff2") format("woff2"),
+    url("../fonts/Kinetika_Black/Kinetika-Black.woff") format("woff"),
+    url("../fonts/Kinetika_Black/Kinetika-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "Raleway";
+  font-size: 64px;
+}
+h2 {
+  font-family: "Raleway";
+  font-size: 26px;
+}
+h3 {
+  font-family: "Raleway";
+  font-size: 22px;
+}
+h4 {
+  font-family: "Raleway";
+}
+p {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 20px;
+}
+
+*::-webkit-scrollbar {
+  background-color: #00abc2;
+  width: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #ffec2d;
+}
+#scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #ffec2d;
+  color: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#scrollToTopButton:hover {
+  background-color: #716914;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Шапка */
+
+header {
+  width: 100%;
+  background-color: #00abc2;
+  position: absolute;
+}
+.logotype img {
+  width: 6.5rem;
+  padding-left: 1rem;
+}
+.nav-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+}
+.links-container {
+  display: flex;
+  height: 100%;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: inherit;
+  padding: 0 2.5rem;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+.link-container:nth-child(2) {
+  border-right: #000000 solid 5px;
+}
+.link-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #ffec2d;
+  transition: height 0.2s ease;
+}
+.link-container:hover::before {
+  height: 100%;
+}
+.link-container:hover a {
+  color: #000000;
+  transition: 0.3s ease;
+}
+.link-container svg {
+  width: 2rem;
+  z-index: 1;
+  color: #ffec2d;
+  transition: 0.2s ease;
+}
+.link-container:hover svg {
+  transition: 0.2s ease;
+  color: #00abc2;
+}
+.link {
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+
+/* Главная */
+
+#astana {
+  display: flex;
+  height: 100vh;
+
+  background-image: url("../img/astana/astana-bg.jpg");
+  background-size: cover;
+}
+.main-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  height: inherit;
+  width: 100vw;
+}
+.main-text {
+  text-align: center;
+  width: 62.5rem;
+  color: white;
+}
+.main-text h1 {
+  border-bottom: 0.3125rem solid #00abc2;
+  color: #ffec2d;
+  padding: 0 6.25rem 1.25rem 6.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* История */
+
+#history {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+#history img {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+
+  z-index: -1;
+}
+
+.history-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8rem 0;
+  gap: 100px;
+}
+.history-content > p {
+  width: 45%;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Lato";
+  line-height: 34px;
+
+  color: white;
+}
+
+.carousel {
+  width: 40%;
+}
+.carousel-content {
+  background-image: url("../img/astana/celinograd1.jpg");
+  transition: 0.2s ease;
+  background-size: cover;
+
+  height: 50vh;
+  position: relative;
+}
+
+.carousel-btns {
+  display: flex;
+  width: 100%;
+  height: 15%;
+}
+
+#carousel-prev,
+#carousel-next {
+  background-color: #00000033;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+#carousel-prev:hover,
+#carousel-next:hover {
+  transition: 0.3s ease;
+  background-color: #00000080;
+}
+.underlines {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  gap: 1.25rem;
+
+  background-color: #00000080;
+}
+.underline {
+  border-bottom: 5px solid #00abc2;
+  width: 3.125rem;
+
+  transition: border-bottom 0.2s ease;
+}
+.underline.active {
+  border-bottom: 5px solid #ffec2d;
+}
+
+.history-description {
+  text-align: right;
+  color: gainsboro;
+
+  padding-top: 2rem;
+}
+.history-description p {
+  opacity: 0.8;
+  font-size: 18px;
+}
+.history-description a {
+  color: #00abc2;
+}
+.history-description h3 {
+  opacity: 0.8;
+}
+/* Достопримечательности */
+
+.title {
+  width: 100%;
+  background-color: #00abc2;
+  color: #ffec2d;
+
+  text-align: center;
+  padding: 1rem 0;
+}
+.subtitle {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+
+  background-color: #ffec2d;
+  color: #00abc2;
+}
+
+.showplace-content {
+  background-image: url("../img/astana/ploshad.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.showplace-content-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.showplace {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16rem;
+}
+
+.showplace:first-child {
+  padding-top: 16rem;
+}
+.showplace:last-child {
+  margin-bottom: 0;
+  padding-bottom: 16rem;
+}
+.showplace img {
+  width: 45%;
+}
+.showplace-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 40%;
+}
+.showplace-text:nth-child(2n) {
+  text-align: right;
+}
+.showplace-text h1 {
+  text-indent: 1rem;
+  color: #ffec2d;
+}
+.showplace-text p {
+  color: white;
+  font-size: 22px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Факты */
+
+#fact-section {
+  background-image: url("../img/astana/facts-astana.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.fact-content-bg {
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 7rem;
+}
+
+.fact-content {
+  width: 65%;
+  margin: 0 auto;
+  padding: 0 7rem;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.fact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin-bottom: 7rem;
+}
+.fact:first-child {
+  /* margin-top: 7rem; */
+  padding-top: 7rem;
+}
+.fact:last-child {
+  padding-bottom: 7rem;
+  margin-bottom: 0;
+}
+.fact img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.fact-text h1 {
+  color: #ffec2d;
+  font-size: 60px;
+  margin-bottom: 1rem;
+}
+.fact-text p {
+  color: white;
+  line-height: 30px;
+}
+
+.other {
+  padding-bottom: 1rem;
+}
+.other p {
+  color: grey;
+}
+.other-almaty,
+.other-tyrkestan,
+.other-home {
+  text-decoration: none;
+  color: #00abc2;
+}
+.other-astana {
+  color: #ffec2d;
+}
+.other-almaty:hover {
+  text-decoration: underline;
+}
+.other-tyrkestan:hover {
+  text-decoration: underline;
+}
+.other-home:hover {
+  text-decoration: underline;
+}
+
+/* Подвал */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 30%;
+  background-color: #00abc2;
+
+  padding: 0.5rem 0;
+}
+.logotype-footer {
+  width: 100px;
+  padding: 5px;
+}
+
+.addictionals {
+  text-align: center;
+}
+.addictionals h3 {
+  font-size: 18px;
+}

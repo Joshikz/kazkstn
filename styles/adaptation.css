@@ -1,0 +1,247 @@
+@media screen and (max-width: 1227px) {
+    body.main-html #country-section img {
+        height: 100rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    body.astana-html h1,
+    body.almaty-html h1,
+    body.tyrkestan-html h1 {
+        font-size: 58px;
+    }
+    body.astana-html h2,
+    body.almaty-html h2,
+    body.tyrkestan-html h2 {
+        font-size: 22px;
+    }
+    body.general-html .history-content > p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    body.astana-html #history img {
+        height: 90rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 10px;
+    }
+    body.general-html h1 {
+        font-size: 48px;
+    }
+    body.general-html p {
+        font-size: 18px;
+    }
+    body.general-html a {
+        font-size: 18px;
+    }
+
+    body.general-html .history-content {
+        flex-direction: column;
+    }
+    body.general-html .history-content > p {
+        width: 80%;
+        font-size: 18px;
+    }
+    body.general-html .carousel {
+        width: 80%;
+    }
+    body.general-html .underlines {
+        margin-top: 35%;
+    }
+    body.general-html #history img {
+        height: 130rem;
+    }
+
+    body.general-html .showplace {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    body.general-html .showplace img + .showplace-text {
+        flex-direction: column;
+        text-align: left;
+    }
+    body.general-html .showplace:nth-child(2n + 1) {
+        flex-direction: column-reverse;
+    }
+    body.general-html .showplace img,
+    body.general-html .showplace-text {
+        width: 80%;
+    }
+
+    body.general-html .fact-content {
+        width: 80%;
+    }
+
+    /* INDEX-HTML */
+
+    body.main-html .country-content {
+        flex-direction: column;
+        padding: 8rem 0;
+    }
+    body.main-html .country-text {
+        width: 80%;
+        margin-bottom: 5rem;
+    }
+    body.main-html .carousel {
+        width: 80%;
+        height: auto;
+    }
+    body.main-html .city-card {
+        width: 30%;
+        height: 35rem;
+    }
+    body .city-top,
+    body .city-btn {
+        height: 7.5rem;
+    }
+    body.main-html .city-section-bg {
+        height: 60em;
+    }
+
+    /* /////////// */
+}
+
+@media screen and (max-width: 768px) {
+    body.general-html h1 {
+        font-size: 44px;
+    }
+    body.astana-html h2,
+    body.almaty-html h2,
+    body.tyrkestan-html h2 {
+        font-size: 20px;
+    }
+    body.general-html p {
+        font-size: 16px;
+    }
+    body.general-html a {
+        font-size: 16px;
+    }
+    body.general-html .fact-content {
+        width: 100%;
+    }
+    body.general-html .underlines {
+        margin-top: 45%;
+    }
+
+    body .city-cards {
+        flex-direction: column;
+    }
+    body.main-html .city-card {
+        width: 40%;
+    }
+    body.main-html .city-section-bg {
+        height: 140rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body.general-html p {
+        font-size: 16px;
+    }
+    body.general-html h1 {
+        font-size: 32px;
+    }
+    body.general-html h2 {
+        font-size: 18px;
+    }
+    body.general-html #history img {
+        display: none;
+    }
+    body #history {
+        background-color: #00343b;
+    }
+    body.general-html .history-content > p {
+        line-height: 28px;
+        width: 80%;
+    }
+    body.general-html .underlines {
+        margin-top: 80%;
+    }
+    body.general-html .fact-content-bg {
+        padding: 0;
+    }
+    body.general-html .fact-content {
+        padding: 0 5rem;
+    }
+    body.general-html .other {
+        padding-bottom: 3rem;
+    }
+
+    body.main-html li {
+        font-size: 16px;
+        color: #fffcb2;
+    }
+
+    body .nav-main {
+        flex-direction: column;
+        height: 13rem;
+    }
+    body.main-html .link-container a,
+    body.almaty-html .link-container a,
+    body.astana-html .link-container a,
+    body.tyrkestan-html .link-container a {
+        font-size: 14px;
+    }
+    body .links-container {
+        width: fit-content;
+    }
+    body .link-container:nth-child(2) {
+        border-right: none;
+    }
+    body .link-container {
+        padding: 0 1rem;
+        border-top: 3px solid black;
+    }
+
+    .country-main img {
+        display: none;
+    }
+    body #country-section {
+        background-color: #00343b;
+    }
+
+    .city-top img {
+        width: 48px;
+    }
+    body.main-html .city-card {
+        width: 90%;
+    }
+    .city-section-bg {
+        display: none;
+    }
+    body #city-section {
+        background-color: #00abc248;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body p {
+        font-size: 14px;
+    }
+    body h1 {
+        font-size: 28px;
+    }
+    body h2 {
+        font-size: 16px;
+    }
+    body.main-html li {
+        font-size: 14px;
+    }
+
+    body.main-html .link-container a,
+    body.almaty-html .link-container a,
+    body.astana-html .link-container a,
+    body.tyrkestan-html .link-container a {
+        font-size: 12px;
+    }
+
+    body.general-html .hidden {
+        display: block;
+    }
+    body.general-html .non-hidden {
+        display: none;
+    }
+}   
